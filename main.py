@@ -13,7 +13,7 @@ from sqlalchemy import ForeignKey
 import os
 is_admin = False
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('NEWEST_BLOG_SECRET_KEY')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
 Bootstrap(app)
 gravatar = Gravatar(app,
