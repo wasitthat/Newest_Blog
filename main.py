@@ -50,7 +50,7 @@ class BlogPost(db.Model):
     users=relationship('User', back_populates='works')
     comments = relationship('Comment', back_populates='blog_posts')
 
-#db.create_all()
+db.create_all()
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
